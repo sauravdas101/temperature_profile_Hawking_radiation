@@ -5,21 +5,21 @@ Numerical simulations of the thermal evolution and temperature profiles of plasm
 ## Overview
 
 This repository contains Python implementations designed to numerically verify the theoretical estimates presented in:
-**"Thermalization of Hawking Radiation"** ([arXiv:2109.00039](https://arxiv.org/abs/2109.00039)).
+**"Black Hole Production of Monopoles in the Early Universe"** ([arXiv:2109.00039](https://arxiv.org/abs/2109.00039)).
 
 The code simulates a non-linear diffusion equation in the regime of high conductivity and thermal equilibrium, a characteristic environment for Hawking radiation interacting with standard model particles.
 
 ## Key Features
 
-- **Steady-State Comparison:** Solves the non-linear heat equation to recover the $T \propto r^{-7/11}$ power-law scaling predicted for a steady source.
-- **Dynamic Boundary Conditions:** Simulates the "heating" phase where the inner boundary temperature spikes as the black hole approaches its final evaporation stage (Hawking paroxysm).
+- **Steady-State Comparison:** Solves the non-linear heat equation to recover the $T \propto r^{-7/11}$ power-law scaling predicted for a BH type source.
+- **Dynamic Boundary Conditions:** Simulates the "heating" phase where the inner boundary temperature spikes as the black hole approaches its final evaporation stage.
 - **Thermal Front Tracking:** Algorithmically determines the radius of the "isothermal core" where the plasma has reached a local equilibrium before transitioning to the power-law tail.
 - **Method of Lines:** Utilizes `scipy.integrate.solve_ivp` with stiff solvers (`Radau`/`BDF`) to handle the numerical instabilities inherent in non-linear diffusion.
 
 ## Project Structure
 
-* `cooling_profile.py`: Simulates the redistribution of energy in a "dead" system where the central source has ceased, showing the flattening of the temperature core.
-* `hawking_heating.py`: Incorporates the time-dependent Hawking temperature $T_H(t) \propto (1 - \Delta t)^{-1/3}$ at the event horizon to simulate active heating of the surroundings.
+* `cooling.py`: Simulates the redistribution of energy in a "dead" system where the central source has ceased, showing the flattening of the temperature core.
+* `Hawking_radiation_1D_heating.py`: Incorporates the time-dependent Hawking temperature $T_H(t) \propto (1 - \Delta t)^{-1/3}$ at the event horizon to simulate active heating of the surroundings.
 
 ## Physics Context
 
